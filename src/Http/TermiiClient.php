@@ -17,9 +17,11 @@ class TermiiClient
         protected readonly string $baseUrl,
         protected readonly string $apiKey,
         protected readonly int $timeout = 30,
+        protected readonly bool $verifySSL = true,
     ) {
         $this->client = new Client([
             'base_uri' => rtrim($baseUrl, '/'),
+            'verify'   => $verifySSL,
             'timeout'  => $timeout,
             'headers'  => [
                 'Content-Type' => 'application/json',

@@ -24,6 +24,7 @@ class TermiiServiceProvider extends ServiceProvider
                 baseUrl: $config['base_url'],
                 apiKey: $config['api_key'],
                 timeout: $config['timeout'] ?? 30,
+                verifySSL: $config['verify_ssl'] ?? true,
             );
         });
 
